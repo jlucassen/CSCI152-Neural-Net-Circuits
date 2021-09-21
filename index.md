@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+## Inspecting Neural Network Reasoning Using Circuits
 
-You can use the [editor on GitHub](https://github.com/jlucassen/NeuralNetCircuitsForTransparency/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Project Members
+- James Lucassen
+- Josh Cordova
+- Sofiane Dissem
+- Theo Bayard de Volo
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Outline
+Neural networks are generally considered black boxes, which introduces a number of problems. If we do not understand the "reasoning" inside a neural network, we cannot necessarily trust it to be aligned, robust, or fair. [Previous research](https://distill.pub/2020/circuits/zoom-in/) has revealed that circuit analysiscan peer in to the black box of a neural net. Given that circuit analysis is a relatively new area of research, and the research up to this point has demonstrated the ability to uncover significant components of a neural network's reasoning, we believe that we can use these strategies on a smaller network to (near?) fully explain its behavior. One challenge we may run into is if there are no interpretable features in the output, as the circuit analysis expets interpretable features to be present but this is not guaranteed. As a target goal for this project, we expect to reasonably approximate the behavior of a simple vision model through circuit decomposition and recomposition.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jlucassen/NeuralNetCircuitsForTransparency/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Ethics
+If this project is successful, it could have substantial implications for data ethics. Transparency procedures are valuable for ensuring machine learning models act fairly, providing evidence in appeals against machine decisions, and a variety of other applications.
