@@ -16,3 +16,9 @@ Neural networks are generally considered black boxes, which introduces a number 
 4. [Visualizing Weights](https://distill.pub/2020/circuits/visualizing-weights/): This paper describes multiple techniques for specifically visualizing weights.
 The main technique is decomposing features into their corresponding weight vectors, however it assumes that there is little non-linear interaction between layers. Still, the "expanded weights" method, which replaces non-linear operations with the closest linear operation, is able to identify meaningful interactions between layers.
 
+### Methods (tentative, update 1)
+We plan to use PyTorch software. Most of our tools will be written ourslves, but likely heavily based on feature visualization methods linked in the reproducibility notebooks from [this paper](https://distill.pub/2017/feature-visualization/).
+
+We will be studying InceptionV1, which is a relatively simple and well-understood open-source vision model. It has been used as something like a "model organism" in the circuits literature so far.
+
+Since we are performing feature visualization by optimization, our inputs will be floating-point unit vectors of activations, and our outputs will be three-channel images that produce the desired activation pattern.
