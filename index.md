@@ -34,9 +34,23 @@ What have you completed or tried to complete?:
 - Checked pricing of MTurk: about 30 cents a participant
 - We found example code
 - We verified that we don’t need an IRB
+- We are aiming for an A 
 
 What issues have you encountered?
 - The code we found is old, we’ll have to bring it up to date when we replicate
 
 Goals for project timeline:
 - Goal for end of week 10: pass the buck to MTurk. Have visualizations replicated, build survey database, decide on survey methods, and submit to start gathering data
+
+### Results/Discussion
+- Stat results
+ - Percent that said base neurons were more interpretable vs non base
+ - P value (and discussion of strength)
+- Implications for visualization research
+ - If basis is more interpretable, this is a good thing
+ - If not, more justification will be needed to continue analyzing visualizations of basis vectors 
+- Future Research
+ - Higher power study
+ - More research on how to quantify interpretability
+ - We didn’t validate that our questions measure interpretability
+  - Forcing them to choose one might’ve introduced noise if a given pair looks equally uninterpretable
