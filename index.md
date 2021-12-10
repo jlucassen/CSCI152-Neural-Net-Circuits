@@ -34,9 +34,13 @@ We ended up studying InceptionV1 off-the-shelf, trained on ImageNet. We chose th
 
 Since we are performing feature visualization by optimization, our inputs were floating-point unit vectors of activations, and our outputs were three-channel images that produce the desired activation pattern. These activation vectors were either randomly chosen basis vectors (one-hot for randomly chosen single neurons),  or the sum of randomly generated weighted vectors of activations of all neurons in the chosen layer, which produces a pseudo-random image.
 
-A basis vector might look something like this: ![Basis activation example](https://i.imgur.com/LMLA10n.jpg)
+A basis vector might look something like this: 
 
-while a random activation would look like this: ![Random activation example](https://i.imgur.com/6qD6AMz.jpg)
+![Basis activation example](https://i.imgur.com/LMLA10n.jpg)
+
+while a random activation would look like this: 
+
+![Random activation example](https://i.imgur.com/6qD6AMz.jpg)
 
 In order to evaluate the interpretability of basis and random circuits, we created a survey using the MTurk Amazon service and received 40 responses from random workers who chose to complete the survey. The survey consists of 10 pairs of images: one image that was created from a basis circuit, and one that was created from a random activation circuit. Respondents were then asked “Which image is easier to interpret as a feature of an object, animal, or person?” Their answer to this question was considered as a measure of which image is more interpretable. 
 
