@@ -6,6 +6,11 @@
 - Sofiane Dissem
 - Theo Bayard de Volo
 
+
+```
+x = 5
+```
+
 ### Introduction
 
 Neural networks are generally treated as black boxes, which introduces a number of problems. If we do not understand the "reasoning" inside a neural network, it makes it much harder to verify whether it is aligned, robust, or fair. [Previous research](https://distill.pub/2020/circuits/) has suggested that circuit analysis can make the black box of a neural net more transparent. However, the usefulness of circuit analysis relies on the idea that features which activate single neurons are more closely related to human-interpretable concepts than features which activate random combinations of neurons. Research has been done to verify this claim, but produced conflicting results. We propose to directly test this claim, by performing a survey to compare the perceived human-interpretability of single-neuron vs random features.
