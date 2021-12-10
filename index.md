@@ -7,9 +7,6 @@
 - Theo Bayard de Volo
 
 
-```
-x = 5
-```
 
 ### Introduction
 
@@ -46,6 +43,38 @@ Basis activation:
 Random activation: 
 
 ![Random activation example](https://i.imgur.com/6qD6AMz.jpg)
+
+
+To generate these basis images, we defined an objective function as the activation of a randomly chosen neuron, and visualized the input that maximized this function using Lucid's rendering library. The code used to do this is below: 
+
+```
+# Basis Activation Image Generator
+model = models.InceptionV1()
+model.load_graphdef()
+param_f = lambda: param.image(256)
+for i in range(10):
+  # We got lucky, no repeated images on the first try :)
+  n = random.randint(0,831)
+  obj = objectives.channel("mixed5a", n)
+  res = render.render_vis(model, obj, param_f)
+ ```
+
+
+```
+# Random Activation Image Generator
+model = models.InceptionV1()
+model.load_graphdef()
+param_f = lambda: param.image(256)
+for i in range(10):
+  obj = 0
+  weights = []
+  for n in range(0,831):
+    w = random.uniform(-1,1)
+    obj += w * objectives.channel("mixed5a", n)
+    weights.append(w)
+    # Note that we saved the weights used for reproducibility purposes
+  res = render.render_vis(model, obj, param_f)
+ ```
 
 In order to evaluate the interpretability of basis and random circuits, we created a survey using the MTurk Amazon service and received 40 responses from random workers who chose to complete the survey. The survey consists of 10 pairs of images: one image that was created from a basis circuit, and one that was created from a random activation circuit. Respondents were then asked “Which image is easier to interpret as a feature of an object, animal, or person?” Their answer to this question was considered as a measure of which image is more interpretable. 
 
