@@ -34,7 +34,7 @@ We used [Lucid](https://github.com/tensorflow/lucid), which is built on top of t
 
 We ended up studying InceptionV1 off-the-shelf, trained on ImageNet. We chose this model because it is a relatively simple and well-understood open-source detection/classification vision model. It has been used as something like a "model organism" in the circuits literature so far. To wit, our data set consists of the visualizations of optimal inputs for a given neuron in the network, as well as visualizations of random activations as a control group.
 
-Since we are performing feature visualization by optimization, our inputs were floating-point unit vectors of activations, and our outputs were three-channel images that produce the desired activation pattern. These activation vectors were either randomly chosen basis vectors (one-hot for randomly chosen single neurons),  or the sum of randomly generated weighted vectors of activations of all neurons in the chosen layer, which produces a pseudo-random image. Examples of each are below: 
+Since we are performing feature visualization by optimization (as described in our summary of Quantifying Interpretability), our inputs were floating-point unit vectors of activations, and our outputs were three-channel images that produce the desired activation pattern. These activation vectors were either randomly chosen basis vectors (one-hot for randomly chosen single neurons),  or the sum of randomly generated weighted vectors of activations of all neurons in the chosen layer, which produces a pseudo-random image. Examples of each are below: 
 
 Basis activation:
 
@@ -76,7 +76,7 @@ for i in range(10):
   res = render.render_vis(model, obj, param_f)
  ```
 
-In order to evaluate the interpretability of basis and random circuits, we created a survey using the MTurk Amazon service and received 40 responses from random workers who chose to complete the survey. The survey consists of 10 pairs of images: one image that was created from a basis circuit, and one that was created from a random activation circuit. Respondents were then asked “Which image is easier to interpret as a feature of an object, animal, or person?” Their answer to this question was considered as a measure of which image is more interpretable. 
+In order to evaluate the interpretability of basis and random circuits, we created a survey using the MTurk Amazon service and received 40 responses from random workers who chose to complete the survey. The survey consists of 10 pairs of images: one image that was created from optimizing a basis activation vector, and one that was created from optimizing a random activation vector. Respondents were then asked “Which image is easier to interpret as a feature of an object, animal, or person?” Their answer to this question was considered as a measure of which image is more interpretable. 
 
 
 After acquiring the survey results, we determined if there was a statistically significant difference between the number of basis images and random images that were chosen. This was done via a binomial test. Any p value less than .05 would be considered significant. 
@@ -104,12 +104,3 @@ After analyzing the responses we received from our survey on basis versus random
 ### Future Work
 
 In the future, we could extend this research in a number of ways. If we continued with Mechanical Turk as a data source, we could improve our survey by asking more detailed questions, and adding validation questions to help us assess the quality of our data. This would also allow us to do more sophisticated statistical analysis, such as correlating data quality with likelihood of correctly classifying basis activations, or attempting to fit a power law to the frequency distribution of interpreted concepts. We could also attempt to train a convolutional neural network to distinguish between basis and random features - this loses the “human” element, but can provide a fairly clear result if there is in fact a signal to be found that can separate the two classes. Finally, we could attempt to extend this validation method to other layers, or other vision models.
-
-Things we need to do
-Pass over already written things - (everyone checks for errors)
-Beef up methods - (Josh respond to comments)
-Discuss results - ^^
-Discussion/Reflection section - (Sofiane and Josh)
-what we could’ve done better
-Future work (James)
-Ethics - restate the goals of visualization - (James)
