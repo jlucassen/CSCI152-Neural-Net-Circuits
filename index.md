@@ -86,7 +86,7 @@ The results of this survey can be found [here](https://www.surveymonkey.com/resu
 
 To determine how much this result actually challenges the claims from the Circuits literature that individual neurons will correspond to more human-readable concepts than random, we calculated a statistical power curve. This will show the probability of finding a non-null result for any given effect size. For larger effect sizes, a null result such as ours becomes less and less probable. 
 
-![power curve](https://i.ibb.co/tzFXyQX/powercurve.png)
+![power curve](https://i.imgur.com/bbXSM9d.png)
 
 ### Discussion
 After analyzing the responses we received from our survey on basis versus random activation, we could see that the results were not statistically significant. This poses a challenge to the claim from the Circuits literature that we aimed to assess. How much of a challenge depends on the effect size being claimed. While we do not have an exact figure for the expected effect size, we can make rough claims such as "an effect size of 0.1 is still entirely possible, but an effect size of 1 is very unlikely." 
